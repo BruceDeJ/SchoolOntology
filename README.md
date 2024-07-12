@@ -11,5 +11,5 @@ You need to use a tool such as Protege to open up the SchoolOntology-Blog.owl fi
 
 ## Links
 
-[Download Protege](https://protege.stanford.edu/software.php])
+[Download Protege](https://protege.stanford.edu/software.php)
 
