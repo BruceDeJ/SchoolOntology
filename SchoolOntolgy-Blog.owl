@@ -1,0 +1,740 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#"
+     xml:base="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:school="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology">
+        <rdfs:comment>A basic School Ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Age -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Age">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#AssignedToClassroom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#AssignedToClassroom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#AssignedToTeacher -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#AssignedToTeacher">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#EmployeeReferenceNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#EmployeeReferenceNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Staff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Grade -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Grade">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#HasQualification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#HasQualification">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Qualification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#HasStudents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#HasStudents">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#HasTeacher -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#HasTeacher">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#PersonName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#PersonName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#SubjectName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#SubjectName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#TaughtBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#TaughtBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teaches">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Age">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#EmployeeReferenceNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#EmployeeReferenceNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Grade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Grade">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rdf:first>
+                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#PersonName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#PersonName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#SubjectName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#SubjectName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Accounting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Accounting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Admin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Admin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Business_Economics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Business_Economics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Degree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Degree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Qualification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#English -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#English">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#IT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#IT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Janitor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Janitor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Life_Orientation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Life_Orientation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Mathematics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Mathematics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Physics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Physics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Qualification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Qualification"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Subject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Accounting-GR4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Accounting-GR4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Accounting"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accounting</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Accounting-GR5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Accounting-GR5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Accounting"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Elena-Rivera"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accounting</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Aisha-Khan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Aisha-Khan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Janitor"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</Age>
+        <EmployeeReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JAN36</EmployeeReferenceNumber>
+        <PersonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aisha</PersonName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Amani-Hernandez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Amani-Hernandez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Student"/>
+        <HasTeacher rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Age>
+        <Grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Grade>
+        <PersonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amani</PersonName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Amelia-Rosewater -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Amelia-Rosewater">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Admin"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Age>
+        <EmployeeReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADMIN50</EmployeeReferenceNumber>
+        <PersonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amelia</PersonName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Business-Economics-GR4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Business-Economics-GR4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Business_Economics"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Economics</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Business-Economics-GR5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Business-Economics-GR5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Business_Economics"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Elena-Rivera"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Economics</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Callum-Davies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Callum-Davies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Student"/>
+        <HasTeacher rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Elena-Rivera"/>
+        <HasTeacher rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Kai-Mitchell"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Age>
+        <Grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Grade>
+        <PersonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Callum</PersonName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom-11-A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom-11-A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom"/>
+        <AssignedToTeacher rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Elena-Rivera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom-12-D -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom-12-D">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom"/>
+        <AssignedToTeacher rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Kai-Mitchell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom-8-C -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom-8-C">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom"/>
+        <AssignedToTeacher rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Elena-Rivera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Elena-Rivera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher"/>
+        <AssignedToClassroom rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom-11-A"/>
+        <HasQualification rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Bachelor-of-Education–Intermediate-Phase"/>
+        <HasStudents rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Callum-Davies"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Accounting-GR5"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Business-Economics-GR5"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#IT-GR5"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Physics-GR5"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</Age>
+        <EmployeeReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TEACH28</EmployeeReferenceNumber>
+        <PersonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elena</PersonName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#English-GR4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#English-GR4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#English"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#English-GR5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#English-GR5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#English"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Kai-Mitchell"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#IT-GR4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#IT-GR4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#IT"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IT</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#IT-GR5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#IT-GR5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#IT"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Elena-Rivera"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IT</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Kai-Hernandez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Kai-Hernandez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Management"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44</Age>
+        <EmployeeReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAN44</EmployeeReferenceNumber>
+        <PersonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kai</PersonName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Kai-Mitchell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Kai-Mitchell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher"/>
+        <AssignedToClassroom rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom-12-D"/>
+        <HasQualification rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Bachelor-of-Education–Senior-Phase"/>
+        <HasStudents rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Callum-Davies"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#English-GR5"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Life-Orientation-GR5"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Mathematics-GR5"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</Age>
+        <EmployeeReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TEACH33</EmployeeReferenceNumber>
+        <PersonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kai</PersonName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Life-Orientation-GR4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Life-Orientation-GR4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Life_Orientation"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Orientation</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Life-Orientation-GR5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Life-Orientation-GR5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Life_Orientation"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Kai-Mitchell"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Orientation</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Mathematics-GR4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Mathematics-GR4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Mathematics"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematics</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Mathematics-GR5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Mathematics-GR5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Mathematics"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Kai-Mitchell"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematics</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Physics-GR4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Physics-GR4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Physics"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physics</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Physics-GR5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Physics-GR5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Physics"/>
+        <TaughtBy rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Elena-Rivera"/>
+        <SubjectName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physics</SubjectName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Sun-Li -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Sun-Li">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Student"/>
+        <HasTeacher rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Age>
+        <Grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Grade>
+        <PersonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun</PersonName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Zahra-Khan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Teacher"/>
+        <AssignedToClassroom rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Classroom-8-C"/>
+        <HasQualification rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Bachelor-of-Education–Foundation-Phase"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Accounting-GR4"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Business-Economics-GR4"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#English-GR4"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Life-Orientation-GR4"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Mathematics-GR4"/>
+        <Teaches rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Physics-GR4"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</Age>
+        <EmployeeReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TEACH29</EmployeeReferenceNumber>
+        <PersonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zahra</PersonName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Bachelor-of-Education–Foundation-Phase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Bachelor-of-Education–Foundation-Phase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Degree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Bachelor-of-Education–Intermediate-Phase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Bachelor-of-Education–Intermediate-Phase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Degree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Bachelor-of-Education–Senior-Phase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Bachelor-of-Education–Senior-Phase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bruce/ontologies/2024/5/SchoolOntology#Degree"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
